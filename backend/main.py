@@ -916,6 +916,11 @@ def chat(request: ChatRequest):
         }
 
 
+
+@app.get("/ping")
+def ping():
+    return {"status": "ok"}
+
 # ============================================================
 # TEXT TO SPEECH ENDPOINT
 # ============================================================

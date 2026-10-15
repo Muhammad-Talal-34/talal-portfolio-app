@@ -8,13 +8,13 @@ University of Education, Lahore.
 Academic focus: Artificial Intelligence, Machine Learning, and Software Development.
 
 ## Key academic projects
-- VoiceLab, his final-year project — an AI-powered voice and emotion processing platform. See the VoiceLab project notes for full detail.
-- AI Calorie Burn Predictor — a machine learning application predicting calorie expenditure.
+- VoiceLab (Emotion-Aware Voice Processing for Customer Services), his final-year project, 2025 to 2026 — an AI-powered voice and emotion processing platform. See the VoiceLab project notes for full detail.
+- Spam Email Classification System, 2025 — an NLP project with an SVM model, Django REST API, and React dashboard.
 
 ## Certifications
 - Python Programming Certificate, Codeliber, issued October 2024
 - HTML Course Completion Certificate, Codeliber, issued September 2024
 
 ## Languages
-- Urdu — full professional proficiency
+- Urdu — native
 - English — professional working proficiency

@@ -1,7 +1,13 @@
-# Talal AI — Portfolio Assistant
+# Talal AI — Portfolio Assistant (AI Portfolio Chatbot, RAG)
 
-The assistant answering questions on this portfolio, currently in progress.
+The assistant answering questions on this portfolio. A personal project, built and deployed live.
 
-A Retrieval-Augmented Generation system built on this knowledge base, designed to answer visitor questions about Talal's background, skills, and projects, then speak the generated answer aloud using text-to-speech.
+A Retrieval-Augmented Generation (RAG) chatbot that answers visitor questions about Talal's background, skills, and projects. Portfolio content is split into chunks and turned into embeddings. For each question, vector-based semantic search retrieves the most relevant content before the language model generates the answer, which keeps answers grounded in portfolio content and reduces unsupported answers. The answer can also be spoken aloud using text-to-speech.
 
-Status: actively being built — this is Talal's current major project.
+## Tech stack
+Python, FastAPI, embeddings, vector search (Cloudflare Vectorize), and Cloudflare AI (Workers AI).
+
+## What he built
+The FastAPI backend for chat requests, retrieval, and response generation, plus tuning of retrieval to stay grounded. It is deployed live on Cloudflare AI infrastructure.
+
+Status: live. Don't state usage numbers, traffic, or accuracy figures — none are confirmed.
