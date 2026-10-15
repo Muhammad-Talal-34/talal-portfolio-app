@@ -2,12 +2,13 @@
 import json
 import os
 import re
+from pathlib import Path
 
 import requests
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import Response
+from fastapi.responses import FileResponse, Response
 from pydantic import BaseModel
 
 
@@ -707,14 +708,11 @@ def generate_speech(text: str):
 @app.get("/")
 def root():
     """
-    Basic backend status endpoint.
+    Serve the portfolio frontend from the backend origin.
     """
 
-    return {
-        "message": (
-            "Talal AI RAG Backend is running"
-        )
-    }
+    frontend_path = Path(__file__).resolve().parent.parent / "index.html"
+    return FileResponse(frontend_path)
 
 
 # ============================================================

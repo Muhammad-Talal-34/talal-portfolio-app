@@ -1,4 +1,4 @@
-
+import json
 import os
 from pathlib import Path
 
@@ -33,7 +33,7 @@ EMBEDDING_MODEL = (
     "@cf/baai/bge-base-en-v1.5"
 )
 
-KNOWLEDGE_DIR = Path("knowledge")
+KNOWLEDGE_DIR = Path(__file__).resolve().parent / "knowledge"
 
 CHUNK_SIZE = 700
 CHUNK_OVERLAP = 100
@@ -148,7 +148,7 @@ def get_knowledge_category(filename: str) -> str:
     if normalized_name == "skills.md":
         return "skills"
 
-    if normalized_name == "experience.md":
+    if "experience" in normalized_name:
         return "experience"
 
     if normalized_name == "career.md":
@@ -240,8 +240,8 @@ def create_embeddings(texts):
 def upload_vectors(vectors):
     """
     Upload vectors and metadata to Cloudflare Vectorize.
+    Requires NDJSON format for Vectorize v2.
     """
-
     if not vectors:
         return None
 
@@ -253,14 +253,19 @@ def upload_vectors(vectors):
         f"/upsert"
     )
 
-    payload = {
-        "vectors": vectors
+    # Convert the list of vectors into a Newline-Delimited JSON string (NDJSON)
+    ndjson_payload = "\n".join(json.dumps(vector) for vector in vectors)
+
+    # Use the strict x-ndjson content type required by Vectorize v2
+    headers = {
+        "Authorization": f"Bearer {API_TOKEN}",
+        "Content-Type": "application/x-ndjson",
     }
 
     response = requests.post(
         url,
-        headers=cloudflare_headers(),
-        json=payload,
+        headers=headers,
+        data=ndjson_payload,  # Send as raw data, not json=
         timeout=REQUEST_TIMEOUT,
     )
 

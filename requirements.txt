@@ -1,8 +1,6 @@
 fastapi
-uvicorn
+uvicorn[standard]
 chromadb
 python-dotenv
-
-fastapi
-uvicorn[standard]
 python-multipart
+requests

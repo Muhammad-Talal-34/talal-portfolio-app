@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Talal Naeem — AI &amp; Python Web Engineer</title>
+  <meta name="backend-api-url" content="http://127.0.0.1:8000/api/chat">
+  <title>Talal Naeem | Python Developer &amp; AI/ML Engineer</title>
+  <meta name="description" content="Talal Naeem is a Python Developer and AI/ML Engineer in Lahore building machine learning applications, speech AI, and RAG-based systems with Python, FastAPI, Django, and React.">
+  <meta name="theme-color" content="#0B1020">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Talal Naeem | Python Developer &amp; AI/ML Engineer">
+  <meta property="og:description" content="Practical AI solutions, from models to applications. Selected projects in speech AI, machine learning, and RAG.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1020'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='%239B7BF5'%3ETN%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,25 +19,25 @@
     rel="stylesheet">
   <style>
     :root {
-      --bg-deep: #100b26;
-      --bg-mid: #160f33;
-      --bg-panel: rgba(255, 255, 255, 0.045);
-      --bg-panel-raised: rgba(255, 255, 255, 0.07);
-      --border-subtle: rgba(255, 255, 255, 0.11);
-      --border-strong: rgba(255, 255, 255, 0.22);
+      --bg-deep: #0b1020;
+      --bg-mid: #0f1629;
+      --bg-panel: #111a2e;
+      --bg-panel-raised: #16213a;
+      --border-subtle: rgba(168, 178, 197, 0.16);
+      --border-strong: rgba(168, 178, 197, 0.32);
 
       --violet: #9b7bf5;
       --violet-dim: rgba(155, 123, 245, 0.16);
       --cyan: #4fd8e0;
       --cyan-dim: rgba(79, 216, 224, 0.16);
-      --pink: #f776b0;
-      --pink-dim: rgba(247, 118, 176, 0.16);
-      --amber: #ffb15c;
-      --amber-dim: rgba(255, 177, 92, 0.18);
+      --pink: #c3b0ff;
+      --pink-dim: rgba(155, 123, 245, 0.16);
+      --amber: #4fd8e0;
+      --amber-dim: rgba(79, 216, 224, 0.14);
 
-      --text-primary: #f6f4ff;
-      --text-muted: #b3add0;
-      --text-faint: #786fa0;
+      --text-primary: #f3f5fc;
+      --text-muted: #a8b2c5;
+      --text-faint: #8792aa;
       --radius-s: 6px;
       --radius-m: 14px;
     }
@@ -220,7 +227,7 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background: rgba(16, 11, 38, 0.66);
+      background: rgba(11, 16, 32, 0.66);
       backdrop-filter: blur(16px) saturate(160%);
       border-bottom: 1px solid var(--border-subtle);
     }
@@ -254,7 +261,7 @@
       justify-content: center;
       font-size: 12px;
       font-weight: 700;
-      color: #170f30;
+      color: #0b1020;
       font-family: 'Space Grotesk', sans-serif;
     }
 
@@ -301,7 +308,7 @@
 
     .btn-primary {
       background: linear-gradient(100deg, var(--violet), var(--pink));
-      color: #170f2e;
+      color: #0b1020;
       border-color: transparent;
       box-shadow: 0 8px 24px -8px rgba(155, 123, 245, 0.6);
     }
@@ -323,8 +330,13 @@
     }
 
     .btn-small {
-      padding: 8px 16px;
-      font-size: 12.5px;
+      padding: 5px 13px;
+      font-size: 12px;
+      gap: 6px;
+    }
+
+    .btn-small.btn-primary {
+      box-shadow: 0 4px 12px -4px rgba(155, 123, 245, 0.55);
     }
 
     .menu-toggle {
@@ -534,8 +546,8 @@
     }
 
     .oc-1 {
-      top: 6%;
-      left: 6%;
+      top: 2%;
+      left: 18%;
       animation-delay: 0s;
       border-color: rgba(155, 123, 245, 0.5);
       color: var(--violet);
@@ -565,6 +577,69 @@
       color: var(--amber);
     }
 
+    .oc-5 {
+      top: 3%; right: 4%;
+      animation-delay: 3.5s;
+      border-color: rgba(155, 123, 245, 0.5);
+      color: var(--violet);
+    }
+
+    .oc-6 {
+      top: 23%; left: 8%;
+      animation-delay: 0.0s;
+      border-color: rgba(79, 216, 224, 0.5);
+      color: var(--cyan);
+    }
+
+    .oc-7 {
+      top: 13%; left: 0%;
+      animation-delay: 0.7s;
+      border-color: rgba(247, 118, 176, 0.5);
+      color: var(--pink);
+    }
+
+    .oc-8 {
+      top: 23%; right: 6%;
+      animation-delay: 1.4s;
+      border-color: rgba(255, 177, 92, 0.5);
+      color: var(--amber);
+    }
+
+    .oc-9 {
+      bottom: 8%; left: 6%;
+      animation-delay: 2.1s;
+      border-color: rgba(155, 123, 245, 0.5);
+      color: var(--violet);
+    }
+
+    .oc-10 {
+      top: 41%; left: -2%;
+      animation-delay: 2.8s;
+      border-color: rgba(79, 216, 224, 0.5);
+      color: var(--cyan);
+    }
+
+    .oc-11 {
+      top: 55%; left: -2%;
+      animation-delay: 3.5s;
+      border-color: rgba(247, 118, 176, 0.5);
+      color: var(--pink);
+    }
+
+    .oc-12 {
+      top: 55%; right: -2%;
+      animation-delay: 0.0s;
+      border-color: rgba(255, 177, 92, 0.5);
+      color: var(--amber);
+    }
+
+    .oc-13 {
+      top: 41%; right: -2%;
+      animation-delay: 0.7s;
+      border-color: rgba(155, 123, 245, 0.5);
+      color: var(--violet);
+    }
+
     @keyframes float {
 
       0%,
@@ -587,7 +662,7 @@
     .bot-head {
       width: 100px;
       height: 78px;
-      background: linear-gradient(160deg, #2c2258, #170f30);
+      background: linear-gradient(160deg, #2c2258, #0b1020);
       border: 1px solid rgba(155, 123, 245, 0.5);
       border-radius: 26px;
       margin: 0 auto;
@@ -1118,7 +1193,7 @@
   max-width: 100%;
   min-width: 0;
 
-  background: rgba(16, 11, 38, 0.75);
+  background: rgba(11, 16, 32, 0.75);
   border: 1px solid var(--border-subtle);
   border-radius: 16px;
 
@@ -1371,7 +1446,7 @@
   border: 1px solid var(--border-subtle); color: var(--text-muted); font-size: 14px; flex-shrink: 0;
   background: none; cursor: pointer; transition: all .2s ease;
 }
-.chat-icon-btn.send { background: linear-gradient(100deg, var(--violet), var(--pink)); color: #170f2e; border-color: transparent; }
+.chat-icon-btn.send { background: linear-gradient(100deg, var(--violet), var(--pink)); color: #0b1020; border-color: transparent; }
 .chat-icon-btn.send:disabled { opacity: .5; cursor: default; }
 .chat-icon-btn.mic:hover { border-color: var(--cyan); color: var(--cyan); }
 .chat-icon-btn.mic.listening {
@@ -1431,7 +1506,186 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
   nav { padding: 14px 20px; }
   .footer-tagline { display: none; }
 }
-  </style>
+
+/* =========================================================
+   FLOATING CHAT LAUNCHER + PANEL (new — wraps existing chat)
+   ========================================================= */
+.chat-launcher {
+  position: fixed; right: 24px; bottom: 24px; z-index: 150;
+  width: 58px; height: 58px; border-radius: 50%; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 24px; line-height: 1;
+  background: linear-gradient(135deg, var(--violet), var(--pink)); color: #0b1020;
+  box-shadow: 0 10px 30px -6px rgba(155, 123, 245, 0.7), 0 0 0 4px rgba(155, 123, 245, 0.15);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.chat-launcher:hover { transform: translateY(-2px) scale(1.05); }
+.chat-widget {
+  position: fixed; right: 24px; bottom: 96px; z-index: 150;
+  width: min(390px, calc(100vw - 32px)); max-height: calc(100vh - 120px); overflow-y: auto;
+  display: none; border-radius: 16px;
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.6);
+}
+.chat-widget.open { display: block; animation: chat-pop .25s ease-out; }
+.chat-widget .chat-mock { background: rgba(11, 16, 32, 0.97); backdrop-filter: blur(14px); }
+@keyframes chat-pop { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+.skill-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-chips span {
+  font-size: 12px; color: var(--text-muted); padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--border-subtle); background: rgba(255, 255, 255, 0.03);
+  font-family: 'Space Grotesk', sans-serif;
+}
+button.btn { cursor: pointer; font-family: inherit; }
+@media (max-width: 520px) {
+  .chat-launcher { right: 16px; bottom: 16px; }
+  .chat-widget { right: 16px; bottom: 84px; width: calc(100vw - 32px); max-height: calc(100vh - 100px); }
+}
+
+/* ---------- experience ---------- */
+.exp-list { border-top: 1px solid var(--border-subtle); }
+.exp-item { display: grid; grid-template-columns: 200px 1fr; gap: 28px; padding: 28px 0; border-bottom: 1px solid var(--border-subtle); }
+.exp-meta { font-family: 'Space Grotesk', sans-serif; font-size: 13px; letter-spacing: 0.03em; }
+.exp-item.c-violet .exp-meta { color: var(--violet); }
+.exp-item.c-cyan .exp-meta { color: var(--cyan); }
+.exp-item.c-pink .exp-meta { color: var(--pink); }
+.exp-body h3 { font-size: 20px; margin-bottom: 6px; }
+.exp-sub { display: block; font-size: 13px; color: var(--text-faint); margin-bottom: 12px; }
+.exp-body ul { list-style: disc; padding-left: 18px; color: var(--text-muted); font-size: 14.5px; }
+.exp-body li { margin-bottom: 6px; }
+@media (max-width: 720px) { .exp-item { grid-template-columns: 1fr; gap: 8px; } }
+  
+/* =========================================================
+   PORTFOLIO REFRESH — navy base, violet + cyan accents
+   ========================================================= */
+html { background: #0b1020; }
+body { background: radial-gradient(ellipse 70% 36% at 50% -4%, rgba(155,123,245,.20), transparent 70%), radial-gradient(ellipse 40% 30% at 100% 8%, rgba(79,216,224,.07), transparent 70%), #0b1020; background-attachment: scroll; }
+#stars { display: none; }
+main { overflow-x: clip; }
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+.grad-text { background: linear-gradient(100deg, #9b7bf5, #4fd8e0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+#intro { background: radial-gradient(ellipse 70% 50% at 50% 45%, rgba(155,123,245,.22), transparent 62%), #0b1020; }
+header { background: rgba(11,16,32,.82); }
+.logo-mark { background: linear-gradient(135deg, #9b7bf5, #4fd8e0); }
+.logo span { background: linear-gradient(100deg, #9b7bf5, #4fd8e0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav-links { gap: 28px; }
+@media (max-width: 1000px) { .nav-links { gap: 18px; font-size: 13px; } }
+
+/* buttons */
+.btn-primary, .btn-small.btn-primary { background: #9b7bf5; color: #0b1020; font-weight: 600; border-color: #9b7bf5; box-shadow: none; }
+.btn-primary:hover { background: #b199ff; transform: translateY(-1px); box-shadow: 0 8px 22px -8px rgba(155,123,245,.7); }
+.btn-ghost { background: transparent; color: var(--text-primary); border-color: rgba(168,178,197,.32); }
+.btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+.text-link { background: none; border: 0; padding: 0; font: inherit; font-size: 14px; color: var(--cyan); cursor: pointer; }
+.text-link:hover { text-decoration: underline; }
+
+/* hero */
+.hero-status { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; border: 1px solid rgba(79,216,224,.35); background: rgba(79,216,224,.08); color: #c4f4f7; border-radius: 999px; font-size: 13px; margin-bottom: 22px; }
+.hero-status i { width: 8px; height: 8px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 0 4px rgba(79,216,224,.18); }
+.hero-name { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.15rem; color: var(--cyan); margin-bottom: 10px; }
+.hero h1 { font-size: clamp(2.2rem, 4.6vw, 3.5rem); line-height: 1.08; margin-bottom: 22px; max-width: 14em; }
+.hero p.lead { max-width: 520px; margin-bottom: 28px; }
+.hero-actions { margin-bottom: 22px; }
+.hero-links { display: flex; gap: 22px; flex-wrap: wrap; align-items: center; margin-bottom: 34px; font-size: 14px; color: var(--text-muted); }
+.hero-links a:hover { color: var(--text-primary); }
+.tag { background: transparent; }
+.tag:nth-child(n) { color: var(--text-muted); border-color: var(--border-subtle); background: transparent; }
+@media (max-width: 920px) {
+  .orbit-chip { font-size: 10px; padding: 4px 9px; white-space: nowrap; }
+  .orbit-chip.oc-1 { inset:auto; top:1%;left:6%; }
+  .orbit-chip.oc-5 { inset:auto; top:1%;right:6%; }
+  .orbit-chip.oc-7 { inset:auto; top:10%;left:2%; }
+  .orbit-chip.oc-2 { inset:auto; top:10%;right:2%; }
+  .orbit-chip.oc-6 { inset:auto; top:19%;left:8%; }
+  .orbit-chip.oc-8 { inset:auto; top:19%;right:8%; }
+  .orbit-chip.oc-10 { inset:auto; top:31%;left:2%; }
+  .orbit-chip.oc-9 { inset:auto; bottom:1%;left:4%; }
+  .orbit-chip.oc-4 { inset:auto; bottom:1%;right:6%; }
+  .orbit-chip.oc-11 { inset:auto; bottom:10%;left:2%; }
+  .orbit-chip.oc-12 { inset:auto; bottom:10%;right:2%; }
+  .orbit-chip.oc-3 { inset:auto; bottom:19%;left:8%; }
+  .orbit-chip.oc-13 { inset:auto; bottom:19%;right:6%; }
+}
+.ghost-word { opacity: .45; }
+
+/* section headings */
+.section-pad { padding: 100px 0; border-top: 1px solid rgba(168,178,197,.09); }
+.index-label { display: flex; align-items: center; gap: 10px; color: var(--cyan); font-size: 13.5px; font-weight: 500; letter-spacing: 0; margin-bottom: 14px; }
+.index-label::before { content: ""; width: 22px; height: 2px; border-radius: 2px; background: var(--cyan); }
+.index-label.center { justify-content: center; }
+.section-head h2, .about-grid h2, .cap-layout h2, .contact-inner h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); }
+.section-head h2::after, .about-grid h2::after, .cap-layout h2::after, .contact-inner h2::after { content: ""; display: block; width: 56px; height: 3px; margin-top: 16px; border-radius: 3px; background: linear-gradient(90deg, #9b7bf5, #4fd8e0); }
+.contact-inner h2::after { margin-inline: auto; }
+
+/* about */
+.philosophy { background: var(--bg-panel); }
+.philosophy .flow .sep { color: var(--cyan); }
+.facts { margin-top: 28px; border: 1px solid var(--border-subtle); border-radius: 14px; background: var(--bg-panel); overflow: hidden; max-width: 420px; }
+.facts div { display: flex; justify-content: space-between; gap: 16px; padding: 13px 18px; border-bottom: 1px solid var(--border-subtle); font-size: 14px; }
+.facts div:last-child { border-bottom: 0; }
+.facts dt { color: var(--text-faint); }
+.facts dd { color: var(--text-primary); text-align: right; }
+
+/* experience + education */
+.exp-list { border-top: 0; }
+.exp-item { background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 28px; margin-bottom: 16px; }
+.exp-item .exp-meta, .exp-item.c-violet .exp-meta, .exp-item.c-cyan .exp-meta, .exp-item.c-pink .exp-meta { color: var(--cyan); font-size: 14px; }
+.exp-body li::marker { color: var(--violet); }
+
+/* projects */
+.project-card { display: flex; flex-direction: column; background: var(--bg-panel); backdrop-filter: none; }
+.project-card::before { display: none; }
+.project-card.from-left, .project-card.from-right { --reveal-x: 0px; --reveal-y: 24px; }
+.project-card.revealed { animation: none !important; }
+.project-card:hover, .project-card.c-violet:hover, .project-card.c-cyan:hover, .project-card.c-pink:hover { border-color: rgba(155,123,245,.55); }
+.project-card.featured { background: linear-gradient(180deg, rgba(155,123,245,.12), var(--bg-panel) 55%); border-color: rgba(155,123,245,.38); }
+.project-cat { font-size: 12.5px; color: var(--text-muted); }
+.project-status { border-color: rgba(79,216,224,.4); color: var(--cyan); background: rgba(79,216,224,.1); }
+.project-card h3 { font-size: 21px; }
+.project-tags span { background: rgba(155,123,245,.08); border-color: rgba(155,123,245,.22); color: #cfc3fb; }
+.project-note { font-size: 13px; color: var(--text-faint); margin-bottom: 18px; }
+.project-link { margin-top: auto; }
+.project-link.static { color: var(--text-muted); }
+.c-violet .project-link .arrow, .c-cyan .project-link .arrow, .c-pink .project-link .arrow { color: var(--cyan); }
+
+/* skills */
+.cap-list .cap-row h4 { color: var(--text-primary) !important; }
+.skill-chips span { background: rgba(155,123,245,.08); border-color: rgba(155,123,245,.22); color: #cfc3fb; }
+.cap-row.learning .skill-chips span { background: transparent; border-style: dashed; border-color: rgba(79,216,224,.4); color: #bdf3f6; }
+
+/* chat */
+.chat-launcher { background: linear-gradient(135deg, #9b7bf5, #4fd8e0); }
+
+/* project cards: colored borders, entrance animation, wide-card layout fix */
+.project-card:nth-child(6n+1), .project-card:nth-child(6n+4) { --accent: #9b7bf5; --accent-rgb: 155,123,245; }
+.project-card:nth-child(6n+2), .project-card:nth-child(6n+5) { --accent: #f776b0; --accent-rgb: 247,118,176; }
+.project-card:nth-child(6n+3), .project-card:nth-child(6n+6) { --accent: #4fd8e0; --accent-rgb: 79,216,224; }
+.project-card, .project-card.featured { border-color: rgba(var(--accent-rgb), .42); }
+.project-card.featured { background: linear-gradient(180deg, rgba(var(--accent-rgb), .12), var(--bg-panel) 55%); }
+.project-card::after { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; pointer-events: none;
+  background: linear-gradient(90deg, var(--accent), transparent 85%); }
+.project-tags span { border-color: rgba(var(--accent-rgb), .3); background: rgba(var(--accent-rgb), .08); }
+.c-violet .project-link .arrow, .c-cyan .project-link .arrow, .c-pink .project-link .arrow { color: var(--accent); }
+.project-card { transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1), border-color .25s ease, box-shadow .3s ease; }
+.project-card.settled { transition: transform .3s ease, border-color .25s ease, box-shadow .3s ease; }
+.project-card:hover, .project-card.c-violet:hover, .project-card.c-cyan:hover, .project-card.c-pink:hover {
+  border-color: var(--accent); box-shadow: 0 16px 38px -16px rgba(var(--accent-rgb), .6); }
+
+/* entrance: cards slide in from their own side, then glow once in their border color */
+.project-card.from-left { --reveal-x: -56px; --reveal-y: 0px; }
+.project-card.from-right { --reveal-x: 56px; --reveal-y: 0px; }
+.project-card.from-bottom { --reveal-x: 0px; --reveal-y: 32px; }
+.project-card.revealed { --reveal-x: 0px; --reveal-y: 0px; }
+@keyframes card-glow {
+  0% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0); }
+  35% { box-shadow: 0 0 36px 6px rgba(var(--accent-rgb), .28); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0); }
+}
+.project-card.revealed:not(.settled) { animation: card-glow 1.2s ease-out !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+</style>
 </head>
 
 <body>
@@ -1465,21 +1719,23 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       </div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#assistant">AI Assistant</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-cta">
-        <a class="btn btn-primary btn-small" href="#contact">Let's talk</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <a class="btn btn-primary btn-small" href="mailto:talalnaeem00@gmail.com">Let's talk</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
       </div>
     </nav>
     <ul class="nav-links-mobile" id="mobileMenu">
       <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#assistant">AI Assistant</a></li>
+      <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </header>
@@ -1489,44 +1745,31 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
     <!-- HERO -->
   <section class="hero" id="top">
     <div class="hero-copy">
-  
-      <div class="hero-kicker">
-        <span>AI & ML Engineer</span>
-        <span>Python · React · Django · FastAPI</span>
-        <span>Lahore, Pakistan</span>
-        <span>Open to Full-Time Opportunities</span>
-      </div>
-  
-      <h1>
-        Building AI<br>
-        <span class="grad-text">that solves real problems.</span><br>
-        <span class="hero-subline">— from ideas to real-world applications.</span>
-      </h1>
-  
+
+      <div class="hero-status"><i></i>Open to full-time roles in Lahore, hybrid, or remote</div>
+      <p class="hero-name">Talal Naeem</p>
+
+      <h1>Building practical AI, from models to applications.</h1>
+
       <p class="lead">
-        Computer Science graduate focused on building practical AI and machine learning
-        applications using Python, React, Django, FastAPI, TensorFlow, and modern
-        AI technologies. I build intelligent systems across voice processing,
-        predictive modeling, automation, and generative AI.
+        I'm a Python Developer and AI/ML Engineer building machine learning applications,
+        speech AI, and RAG-based systems with Python, FastAPI, Django, and React.
+        I'm currently working at Bixi Soft on backend services and AI/ML features.
       </p>
-  
+
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Projects</a>
-        <a href="#assistant" class="btn btn-ghost">Ask My AI Assistant →</a>
+        <a href="#projects" class="btn btn-primary">Explore projects</a>
+        <a href="Talal-Naeem-Resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">View resume</a>
       </div>
-  
-      <div class="tag-row">
-        <span class="tag">Python</span>
-        <span class="tag">React</span>
-        <span class="tag">Django</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">TensorFlow</span>
-        <span class="tag">RAG</span>
-        <span class="tag">Agentic AI</span>
+
+      <div class="hero-links">
+        <button type="button" class="text-link" id="openChatHero">Ask my AI assistant</button>
+        <a href="https://www.linkedin.com/in/talalnaeem-ai" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Muhammad-Talal-34" target="_blank" rel="noopener">GitHub</a>
       </div>
-  
+
     </div>
-  
+
     <div class="avatar-stage">
       <span class="ghost-word">AI</span>
       <div class="ring ring-2"></div>
@@ -1538,6 +1781,15 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       <div class="orbit-chip oc-2">RAG</div>
       <div class="orbit-chip oc-3">NLP</div>
       <div class="orbit-chip oc-4">AI</div>
+      <div class="orbit-chip oc-5 oc-n">Machine Learning</div>
+      <div class="orbit-chip oc-6 oc-n">Deep Learning</div>
+      <div class="orbit-chip oc-7 oc-n">Generative AI</div>
+      <div class="orbit-chip oc-8 oc-n">AI Agents</div>
+      <div class="orbit-chip oc-9 oc-n">Prompt Engineering</div>
+      <div class="orbit-chip oc-10 oc-n">Embeddings</div>
+      <div class="orbit-chip oc-11 oc-n">Vector Databases</div>
+      <div class="orbit-chip oc-12 oc-n">Semantic Search</div>
+      <div class="orbit-chip oc-13 oc-n">Computer Vision</div>
   
       <div class="bot">
         <div class="bot-antenna"></div>
@@ -1559,164 +1811,237 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       </div>
     </div>
   </section>
+
     <!-- ABOUT -->
     <section class="section-pad" id="about">
-      <span class="index-label">About</span>
       <div class="about-grid">
-        <h2>Exploring AI.<br>Building <span class="grad-text">intelligently.</span></h2>
+        <div>
+          <span class="index-label">Who I am</span>
+          <h2>About Me</h2>
+          <dl class="facts">
+            <div><dt>Role</dt><dd>Python / AI-ML Developer</dd></div>
+            <div><dt>Company</dt><dd>Bixi Soft</dd></div>
+            <div><dt>Degree</dt><dd>BS Computer Science, 2026</dd></div>
+            <div><dt>Based in</dt><dd>Lahore, Pakistan</dd></div>
+          </dl>
+        </div>
         <div class="about-copy">
-          <p>I'm a Python developer and AI and ML engineer who designs and builds web applications powered by
-            artificial intelligence. My work spans Django, Flask, and FastAPI on the backend, connected to machine
-            learning and deep learning models that solve real, practical problems.</p>
-          <p>I'm currently deepening my expertise in agentic AI and Retrieval-Augmented Generation — systems that
-            search, reason, and deliver grounded answers from real data, rather than relying on a model's memory
-            alone. The assistant below is a working example of that approach, live on this page.</p>
+          <p>I'm a Python Developer and AI/ML Engineer focused on building practical software powered by machine learning and modern AI.</p>
+          <p>My work spans Python backend development, REST API design, machine learning integration, and full-stack applications with Django, FastAPI, and React. I've worked on speech processing, predictive modeling, NLP classification, and Retrieval-Augmented Generation (RAG).</p>
+          <p>I like taking ideas from experiment to usable application, with attention to clean backend architecture, data handling, API integration, and maintainable code. I'm looking for a team building reliable software and AI-driven products.</p>
           <div class="philosophy">
-            <span class="label">HOW I WORK</span>
-            <div class="flow">Learn <span class="sep">→</span> Build <span class="sep">→</span> Test <span
-                class="sep">→</span> Improve</div>
+            <span class="label">How I work</span>
+            <div class="flow">Learn <span class="sep">→</span> Build <span class="sep">→</span> Test <span class="sep">→</span> Improve</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section-pad" id="experience">
+      <div class="section-head">
+        <div>
+          <span class="index-label">Where I work</span>
+          <h2>Professional Experience</h2>
+        </div>
+        <p>Backend, data, and AI/ML work for business applications.</p>
+      </div>
+
+      <div class="exp-list">
+        <div class="exp-item c-violet">
+          <div class="exp-meta">Oct 2025 – Present</div>
+          <div class="exp-body">
+            <h3>Python / AI-ML Developer</h3>
+            <span class="exp-sub">Bixi Soft</span>
+            <ul>
+              <li>Develop REST APIs with FastAPI and Django, with MySQL storage for sales, inventory, and forecast data.</li>
+              <li>Clean and validate sales data and build forecasting features such as lag sales and rolling averages for DemandCast.</li>
+              <li>Build data-processing pipelines for validation, transformation, and storage, and automate repetitive tasks with reusable Python modules.</li>
+              <li>Test and debug API endpoints to improve reliability, working in a Git and GitHub workflow.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section class="section-pad" id="projects">
       <div class="section-head">
         <div>
-          <span class="index-label">Selected work</span>
-          <h2>Things I've <span class="grad-text">built.</span></h2>
+          <span class="index-label">What I've built</span>
+          <h2>Selected Projects</h2>
         </div>
-        <p>Projects that took a model out of a notebook and put it in front of a real user.</p>
+        <p>Six projects, from a deep-learning speech platform to a RAG assistant and professional forecasting work.</p>
       </div>
 
       <div class="project-grid">
 
-        <div class="project-card wide c-violet">
-          <div class="project-top">
-            <span class="project-cat">AI · SPEECH PROCESSING · FINAL-YEAR PROJECT</span>
-            <span class="project-status">Flagship</span>
-          </div>
-          <h3>VoiceLab — Advanced Audio AI Command Center</h3>
-          <p>An AI voice-processing platform for customer service: emotion detection (Happy, Neutral, Angry, Sad,
-            Fear) via a CNN-BiLSTM model, Whisper-powered voice-to-text, text-to-speech, noise reduction and voice
-            enhancement — all in one pipeline. I worked on the frontend architecture and integration; the project
-            also includes a Python/FastAPI AI backend built with a teammate.</p>
-          <div class="project-tags">
-            <span>React</span><span>Vite</span><span>FastAPI</span><span>Whisper</span><span>TensorFlow</span><span>CNN-BiLSTM</span>
-          </div>
-          <div class="project-link"><span>Speech Emotion Recognition · STT · TTS · Noise Reduction</span> <span
-              class="arrow">↗</span></div>
-        </div>
+        <article class="project-card featured c-violet">
+          <div class="project-top"><span class="project-cat">Speech AI · Final-year project</span><span class="project-status">Featured</span></div>
+          <h3>Emotion-Aware-Voice-Processing-for-Customer-Services</h3>
+          <p>An audio AI platform for customer service that combines speech-to-text, five-class emotion detection, text-to-speech, noise reduction, and voice enhancement in one browser interface. I trained the CNN-BiLSTM emotion model, built the FastAPI endpoints that serve it, integrated Whisper and Edge TTS, and built the React interface.</p>
+          <div class="project-note">Emotion detection processes a recorded MP3 or WAV file; it is not live streaming.</div>
+          <div class="project-tags"><span>React</span><span>Vite</span><span>FastAPI</span><span>Whisper</span><span>TensorFlow</span><span>CNN-BiLSTM</span></div>
+          <a class="project-link" href="https://github.com/Muhammad-Talal-34/Emotion-Aware-Voice-Processing-for-Customer-Services" target="_blank" rel="noopener"><span>View source on GitHub</span> <span class="arrow">↗</span></a>
+        </article>
 
-        <div class="project-card c-cyan">
-          <div class="project-top"><span class="project-cat">MACHINE LEARNING</span></div>
-          <h3>AI Calorie Burn Predictor</h3>
-          <p>An XGBoost regression model trained on ~15,000 activity records to estimate calorie expenditure, shipped
-            as a full-stack app with a Django backend and React frontend.</p>
-          <div class="project-tags"><span>Python</span><span>XGBoost</span><span>Django</span><span>React</span></div>
-          <div class="project-link"><span>Model → API → Interface</span> <span class="arrow">↗</span></div>
-        </div>
-
-        <div class="project-card c-pink">
-          <div class="project-top"><span class="project-cat">DJANGO · MYSQL</span></div>
-          <h3>Custom CRUD Application</h3>
-          <p>A Django + MySQL app built with a custom user model (login via username or email) and a full product
-            CRUD flow with image upload — deliberately going beyond built-in generic CRUD.</p>
-          <div class="project-tags"><span>Django</span><span>MySQL</span><span>Custom Auth</span></div>
-          <div class="project-link"><span>AbstractBaseUser · Product CRUD</span> <span class="arrow">↗</span></div>
-        </div>
-
-        <div class="project-card c-cyan">
-          <div class="project-top"><span class="project-cat">NLP · CLASSIFICATION</span></div>
-          <h3>Spam Email Classification System</h3>
-          <p>An NLP dashboard that classifies incoming email text as spam or not, using an SVM model served through a
-            Django REST Framework API to a React UI.</p>
-          <div class="project-tags"><span>React</span><span>DRF</span><span>scikit-learn</span><span>SVM</span></div>
-          <div class="project-link"><span>Text preprocessing → SVM → REST API</span> <span class="arrow">↗</span></div>
-        </div>
-
-        <div class="project-card c-violet">
-          <div class="project-top"><span class="project-cat">MACHINE LEARNING</span></div>
-          <h3>Customer Churn Prediction Engine</h3>
-          <p>A predictive analytics tool benchmarking Logistic Regression, Random Forest and XGBoost to flag customer
-            churn risk, integrated into Django for real-time scoring.</p>
-          <div class="project-tags"><span>XGBoost</span><span>scikit-learn</span><span>pandas</span><span>Django</span>
-          </div>
-          <div class="project-link"><span>Benchmarking → Serialized model → Scoring</span> <span class="arrow">↗</span>
-          </div>
-        </div>
-
-        <div class="project-card c-pink">
-          <div class="project-top">
-            <span class="project-cat">RAG · VOICE AI</span>
-            <span class="project-status">Building now</span>
-          </div>
+        <article class="project-card featured c-violet">
+          <div class="project-top"><span class="project-cat">RAG · Voice AI</span><span class="project-status">Live on this page</span></div>
           <h3>Talal AI — Portfolio Assistant</h3>
-          <p>The assistant on this page. A RAG pipeline grounded in my real portfolio knowledge that answers visitor
-            questions and speaks the response back using text-to-speech.</p>
-          <div class="project-tags"><span>FastAPI</span><span>RAG</span><span>Embeddings</span><span>TTS</span></div>
-          <div class="project-link"><span>See it below</span> <span class="arrow">↗</span></div>
-        </div>
+          <p>The assistant behind the chat icon on this page. My portfolio content is split into chunks and embedded; each question retrieves the most relevant chunks through vector search before the model answers, so replies stay grounded in my real background. Answers can be read aloud with text-to-speech.</p>
+          <div class="project-note">I built the FastAPI backend and tuned retrieval to stay grounded.</div>
+          <div class="project-tags"><span>FastAPI</span><span>RAG</span><span>Embeddings</span><span>Cloudflare Vectorize</span><span>Workers AI</span></div>
+          <a class="project-link" href="#" id="openChatProject"><span>Try it live</span> <span class="arrow">↗</span></a>
+          <a class="project-link" href="https://github.com/Muhammad-Talal-34/Muhammad-Talal-34.github.io" target="_blank" rel="noopener"><span>View source on GitHub</span> <span class="arrow">↗</span></a>
+        </article>
+
+        <article class="project-card c-cyan">
+          <div class="project-top"><span class="project-cat">Forecasting · Professional work</span><span class="project-status">Bixi Soft</span></div>
+          <h3>DemandCast — Retail Demand Forecasting</h3>
+          <p>A retail demand forecasting and inventory-planning platform that predicts 7-day and 30-day demand, compares it with current stock, and flags stock-out risk for the business owner to review. I cleaned and validated sales data, built forecasting features such as lag sales and rolling averages, and developed the REST APIs and MySQL storage.</p>
+          
+          <div class="project-tags"><span>Python</span><span>FastAPI</span><span>MySQL</span><span>Pandas</span><span>scikit-learn</span></div>
+          <div class="project-link static"><span>Professional project at Bixi Soft</span></div>
+        </article>
+
+        <article class="project-card c-violet">
+          <div class="project-top"><span class="project-cat">Machine learning · Full-stack</span></div>
+          <h3>AI Calorie Burn Predictor</h3>
+          <p>Predicts calories burned from heart rate, body temperature, workout time, and personal details, then suggests a simple recovery meal plan for the user's goal. An XGBoost regressor trained on about 15,000 records, served by a Django REST Framework API to a React dashboard.</p>
+          
+          <div class="project-tags"><span>Python</span><span>XGBoost</span><span>Django REST</span><span>React</span></div>
+          <a class="project-link" href="https://github.com/Muhammad-Talal-34/AI-Calorie-Burn-Predictor" target="_blank" rel="noopener"><span>View source on GitHub</span> <span class="arrow">↗</span></a>
+        </article>
+
+
+        <article class="project-card c-violet">
+          <div class="project-top"><span class="project-cat">NLP · Classification</span></div>
+          <h3>Spam Email Classification System</h3>
+          <p>An NLP dashboard that classifies email text as spam or not spam. TF-IDF features feed an SVM model, which is served through a Django REST Framework API to an interactive React interface.</p>
+          
+          <div class="project-tags"><span>React</span><span>Django REST</span><span>scikit-learn</span><span>SVM</span><span>TF-IDF</span></div>
+          <a class="project-link" href="https://github.com/Muhammad-Talal-34/Spam-Mail-Checker-" target="_blank" rel="noopener"><span>View source on GitHub</span> <span class="arrow">↗</span></a>
+        </article>
+
+        <article class="project-card c-cyan">
+          <div class="project-top"><span class="project-cat">Backend · Django</span></div>
+          <h3>Custom CRUD Application</h3>
+          <p>A Django and MySQL project built to go beyond generic CRUD: a custom user model on AbstractBaseUser with login by username or email (case-insensitive), plus a product CRUD flow with image upload.</p>
+          
+          <div class="project-tags"><span>Django</span><span>MySQL</span><span>Custom auth</span><span>Image upload</span></div>
+          <a class="project-link" href="https://github.com/Muhammad-Talal-34/Custom-Crud-App" target="_blank" rel="noopener"><span>View source on GitHub</span> <span class="arrow">↗</span></a>
+        </article>
 
       </div>
     </section>
 
-    <!-- CAPABILITIES -->
-    <section class="section-pad" id="capabilities">
+    <!-- SKILLS -->
+    <section class="section-pad" id="skills">
       <div class="cap-layout">
         <div>
-          <span class="index-label">Capabilities</span>
-          <h2>From models to <span class="grad-text">products.</span></h2>
-          <p style="color:var(--text-muted);font-size:14.5px;margin-top:16px;max-width:320px;">A focused toolkit for
-            building, testing and shipping real AI systems end to end.</p>
+          <span class="index-label">What I use</span>
+          <h2>Technical Skills</h2>
+          <p style="color:var(--text-muted);font-size:14.5px;margin-top:16px;max-width:320px;">Grouped by how I use them. Items under "Currently learning" are still in progress.</p>
         </div>
         <div class="cap-list">
-          <div class="cap-row">
+          <div class="cap-row ">
+            <h4>Programming</h4>
+            <div class="skill-chips"><span>Python</span><span>JavaScript</span><span>SQL</span></div>
+          </div>
+          <div class="cap-row ">
+            <h4>Backend</h4>
+            <div class="skill-chips"><span>FastAPI</span><span>Django</span><span>Django REST Framework</span><span>Flask</span><span>REST APIs</span></div>
+          </div>
+          <div class="cap-row ">
             <h4>AI &amp; Machine Learning</h4>
-            <p>Scikit-learn · XGBoost · Deep Learning · NLP</p>
+            <div class="skill-chips"><span>Scikit-learn</span><span>TensorFlow</span><span>XGBoost</span><span>Deep Learning</span><span>Feature engineering</span><span>Model evaluation</span></div>
           </div>
-          <div class="cap-row">
+          <div class="cap-row ">
             <h4>Generative AI</h4>
-            <p>Retrieval-Augmented Generation · Agentic AI · Prompt Engineering</p>
+            <div class="skill-chips"><span>RAG</span><span>Embeddings</span><span>Vector search</span><span>LLM integration</span><span>Prompt design</span></div>
           </div>
-          <div class="cap-row">
-            <h4>Backend Engineering</h4>
-            <p>Python · Django · FastAPI </p>
+          <div class="cap-row ">
+            <h4>Speech &amp; NLP</h4>
+            <div class="skill-chips"><span>Whisper</span><span>NLP</span><span>Audio processing</span><span>Edge TTS</span></div>
           </div>
-          <div class="cap-row">
+          <div class="cap-row ">
             <h4>Frontend</h4>
-            <p>React.js ·  JavaScript</p>
+            <div class="skill-chips"><span>React</span><span>JavaScript</span><span>HTML &amp; CSS</span></div>
           </div>
-          <div class="cap-row">
-            <h4>Databases</h4>
-            <p>MySQL · Relational Modeling</p>
+          <div class="cap-row ">
+            <h4>Databases &amp; Tools</h4>
+            <div class="skill-chips"><span>MySQL</span><span>Git</span><span>GitHub</span></div>
           </div>
-          <div class="cap-row">
-            <h4>Developer Tools</h4>
-            <p>Git · GitHub </p>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section-pad" id="education">
+      <div class="section-head">
+        <div>
+          <span class="index-label">Where I studied</span>
+          <h2>Education</h2>
+        </div>
+        <p>Computer science with a focus on AI, machine learning, and software development.</p>
+      </div>
+
+      <div class="exp-list">
+        <div class="exp-item c-cyan">
+          <div class="exp-meta">2022 – 2026</div>
+          <div class="exp-body">
+            <h3>BS Computer Science</h3>
+            <span class="exp-sub">University of Education, Lahore</span>
+            <ul>
+              <li>Academic focus on artificial intelligence, machine learning, and software development.</li>
+              <li>Final-year project: VoiceLab, an emotion-aware voice processing platform for customer services.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-item c-violet">
+          <div class="exp-meta">Certifications</div>
+          <div class="exp-body">
+            <h3>Codeliber</h3>
+            <span class="exp-sub">Issued 2024</span>
+            <ul>
+              <li>Python Programming Certificate, October 2024.</li>
+              <li>HTML Course Completion Certificate, September 2024.</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ASSISTANT -->
-    <section class="section-pad" id="assistant">
-      <span class="index-label">Meet the assistant</span>
-      <div class="assistant-panel">
-        <div class="assistant-copy">
-          <div class="assistant-icon">🤖</div>
-          <h3>Meet <span class="grad-text">Talal Agent.</span></h3>
-          <p>An interactive guide to this portfolio, grounded in my real project and skill data. Ask about my
-            projects, skills or how to get in touch — I'll answer in text and say it out loud too.</p>
-          <div class="assistant-chips">
-            <span>About Talal</span>
-            <span>Projects</span>
-            <span>Skills</span>
-            <span>Contact</span>
-          </div>
+    <!-- CONTACT -->
+    <section class="section-pad" id="contact">
+      <div class="contact-inner">
+        <span class="index-label center">Get in touch</span>
+        <h2>Let's Work Together</h2>
+        <p>I'm a Python / AI-ML Developer at Bixi Soft and open to full-time roles as an AI/ML Engineer, Python Developer, Backend Developer, or Full-Stack Developer. On-site in Lahore, hybrid, and remote are all fine.</p>
+        <div class="contact-actions">
+          <a href="mailto:talalnaeem00@gmail.com" class="btn btn-primary">Email me</a>
+          <a href="Talal-Naeem-Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">View resume</a>
+          <a href="https://www.linkedin.com/in/talalnaeem-ai" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
+          <a href="https://github.com/Muhammad-Talal-34" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
         </div>
+      </div>
+    </section>
 
-        <div class="chat-mock">
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 Talal Naeem — Python Developer &amp; AI/ML Engineer</span>
+      <span class="footer-tagline">Full-stack  Engineer</span>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- FLOATING CHATBOT -->
+  <button type="button" class="chat-launcher" id="chatLauncher" aria-label="Open chat with Talal AI" aria-expanded="false">💬</button>
+  <div class="chat-widget" id="chatWidget" role="dialog" aria-label="Talal AI chat">
+    <div class="chat-mock">
 
           <div class="chat-head">
             <div class="chat-head-id">
@@ -1753,40 +2078,11 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
           </div>
         
           <p class="chat-note">
-            Talal AI is connected to a live RAG backend. If it can't reach the server,
-            make sure the FastAPI backend is running and the API URL is correct.
+            Talal AI answers from my portfolio knowledge base. If it can't connect, please try again shortly.
           </p>
         
         </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section-pad" id="contact">
-      <div class="contact-inner">
-        <span class="index-label" style="display:block;text-align:center;">Get in touch</span>
-        <h2>Let's build something <span class="grad-text">real.</span></h2>
-        <p>Open to full-time roles in AI and machine learning engineering, and Python development — on-site,
-          hybrid or remote.</p>
-        <div class="contact-actions">
-          <a href="mailto:talalnaeem00@gmail.com" class="btn btn-primary">Email me</a>
-          <a href="https://www.linkedin.com/in/talalnaeem-ai" target="_blank" rel="noopener"
-            class="btn btn-ghost">LinkedIn ↗</a>
-          <a href="https://github.com/Muhammad-Talal-34" target="_blank" rel="noopener" class="btn btn-ghost">GitHub
-            ↗</a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="wrap footer-inner">
-      <span>© 2026 Talal Naeem — AI &amp; Python Web Engineer</span>
-      <span class="footer-tagline">AI · Machine Learning · RAG · Full-Stack</span>
-      <a href="#top" class="back-top">Back to top ↑</a>
-    </div>
-  </footer>
+  </div>
 
   <script>
     // ==========================================
@@ -1798,7 +2094,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
 
       const prefersReduced = window.matchMedia &&
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const MIN_DURATION = prefersReduced ? 300 : 3000;
+      const MIN_DURATION = prefersReduced ? 300 : 1600;
       const start = Date.now();
       let stopCanvas = null;
 
@@ -1845,7 +2141,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       const barFill = document.getElementById('introBarFill');
       const pctEl = document.getElementById('introPct');
       if (barFill && pctEl) {
-        const duration = prefersReduced ? 300 : 2700;
+        const duration = prefersReduced ? 300 : 1400;
         const t0 = Date.now();
         (function tick() {
           const elapsed = Date.now() - t0;
@@ -1860,7 +2156,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       const canvas = document.getElementById('introCanvas');
       if (canvas && !prefersReduced) {
         const ctx = canvas.getContext('2d');
-        const COLORS = ['155,123,245', '79,216,224', '247,118,176'];
+        const COLORS = ['155,123,245', '79,216,224', '155,123,245'];
         let w, h, particles, rafId;
 
         function resize() {
@@ -1946,7 +2242,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
     (function () {
       const field = document.getElementById('stars');
       if (field) {
-        const count = 140;
+        const count = 0; // starfield disabled for performance
         const frag = document.createDocumentFragment();
         for (let i = 0; i < count; i++) {
           const s = document.createElement('div');
@@ -1971,6 +2267,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener('click', function () {
         mobileMenu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(mobileMenu.classList.contains('open')));
         menuToggle.textContent = mobileMenu.classList.contains('open') ? '✕' : '☰';
       });
       mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
@@ -1998,7 +2295,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       if (prefersReduced || !('IntersectionObserver' in window)) {
-        cards.forEach(card => card.classList.add('revealed'));
+        cards.forEach(card => card.classList.add('revealed', 'settled'));
         return;
       }
 
@@ -2008,7 +2305,7 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
           if (entry.isIntersecting) {
             const card = entry.target;
             const delay = (cardList.indexOf(card) % 2) * 100;
-            setTimeout(() => card.classList.add('revealed'), delay);
+            setTimeout(() => { card.classList.add('revealed'); setTimeout(() => card.classList.add('settled'), 1300); }, delay);
             observer.unobserve(card);
           }
         });
@@ -2021,9 +2318,9 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
     // 3. TALAL AI ASSISTANT — chat + voice
     // ==========================================
 
-    // ⚠️ Update this to your deployed backend URL before publishing the
-    // portfolio online. 127.0.0.1 only works while you're testing locally.
-    const API_URL = 'http://127.0.0.1:8000/api/chat';
+    // Leave blank when the frontend is served by FastAPI; set for a separately hosted backend.
+    const PRODUCTION_API_URL = document.querySelector('meta[name="backend-api-url"]')?.content.trim();
+    const API_URL = PRODUCTION_API_URL || '/api/chat';
 
     const chatBody = document.getElementById('chatBody');
     const chatInput = document.getElementById('chatInput');
@@ -2187,6 +2484,10 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       if (sendBtn) sendBtn.disabled = true;
 
       try {
+        if (!API_URL) {
+          throw new Error('Set the backend-api-url meta tag to your deployed backend /api/chat URL.');
+        }
+
         const response = await fetch(API_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -2215,7 +2516,9 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
       } catch (error) {
         console.error('Chat request failed:', error);
         loading.remove();
-        const msg = 'Sorry, I cannot connect to Talal AI right now. Make sure the backend server is running.';
+        const msg = !API_URL
+          ? 'Talal AI is not connected yet. Please try again later, or email me directly.'
+          : 'Sorry, I can\'t reach Talal AI right now. Please try again in a moment, or email me directly.';
         addBubble(msg, 'bot');
       } finally {
         if (sendBtn) sendBtn.disabled = false;
@@ -2294,6 +2597,37 @@ footer { border-top: 1px solid var(--border-subtle); padding: 26px 0; }
         });
       }
     }
+
+    // ==========================================
+    // 4. FLOATING CHAT LAUNCHER (open / close)
+    // ==========================================
+    (function () {
+      const launcher = document.getElementById('chatLauncher');
+      const widget = document.getElementById('chatWidget');
+      if (!launcher || !widget) return;
+
+      function setOpen(open) {
+        widget.classList.toggle('open', open);
+        launcher.textContent = open ? '✕' : '💬';
+        launcher.setAttribute('aria-expanded', String(open));
+        launcher.setAttribute('aria-label', open ? 'Close chat' : 'Open chat with Talal AI');
+        if (open) {
+          scrollChatToBottom();
+          if (chatInput) chatInput.focus({ preventScroll: true });
+        } else if ('speechSynthesis' in window) {
+          window.speechSynthesis.cancel();
+        }
+      }
+
+      launcher.addEventListener('click', () => setOpen(!widget.classList.contains('open')));
+      ['openChatHero', 'openChatProject'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('click', (e) => { e.preventDefault(); setOpen(true); });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && widget.classList.contains('open')) setOpen(false);
+      });
+    })();
   </script>
 
 </body>
