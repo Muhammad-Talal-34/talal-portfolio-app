@@ -475,6 +475,39 @@
       border-color: rgba(155, 123, 245, 0.4);
     }
 
+    /* ---------- profile photo (hero, shown in the robot's place) ---------- */
+    /* To bring the robot back, delete the ".avatar-stage .bot" rule below. */
+    .avatar-stage .bot { display: none; }
+
+    .profile-photo {
+      position: relative;
+      width: 290px;
+      height: 290px;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(135deg, var(--violet), var(--cyan) 55%, var(--pink));
+      box-shadow: 0 0 0 10px rgba(155, 123, 245, 0.14), 0 0 90px rgba(155, 123, 245, 0.5);
+      z-index: 5;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      border: 5px solid var(--bg-deep);
+      background: var(--bg-panel);
+    }
+
+    @media (max-width: 920px) {
+      .profile-photo { width: 235px; height: 235px; }
+    }
+
+    @media (max-width: 520px) {
+      .profile-photo { width: 200px; height: 200px; }
+    }
+
     /* ---------- avatar ---------- */
     .avatar-stage {
       position: relative;
@@ -1776,6 +1809,9 @@ header { background: rgba(11,16,32,.82); }
       <div class="ring ring-1"></div>
       <div class="ring ring-3"></div>
       <div class="beam"></div>
+      <div class="profile-photo">
+        <img src="talal.jpg" alt="Talal Naeem, Python Developer and AI/ML Engineer" width="290" height="290" loading="eager">
+      </div>
   
       <div class="orbit-chip oc-1">LLM</div>
       <div class="orbit-chip oc-2">RAG</div>
