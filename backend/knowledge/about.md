@@ -4,7 +4,7 @@
 - Name: Muhammad Talal Naeem, also written as Muhammad Talal or M Talal Naeem
 - Location: Lahore, Punjab, Pakistan
 - Computer Science graduate, University of Education, Lahore (BS Computer Science, 2026)
-- Current role: Python / AI-ML Developer at Bixi Soft (since October 2025)
+- Current role: Python / AI-ML Developer at Bixi Soft (since December 2025)
 - Primary direction: AI/ML Engineer, Python Developer, and AI-Python backend developer
 
 ## Positioning
@@ -13,7 +13,7 @@ Talal is a Python Developer and Junior AI/ML Engineer who builds AI-powered appl
 He is looking for Python Developer, AI/ML Engineer, Backend Developer, or Full-Stack Developer roles. He avoids labeling himself narrowly as just a "web developer" or just a "machine learning student."
 
 ## Professional experience
-Python / AI-ML Developer at Bixi Soft, October 2025 to present. He builds and maintains Python backend services and REST APIs and supports AI/ML features for business applications. See the Bixi Soft experience and DemandCast notes for detail.
+Python / AI-ML Developer at Bixi Soft, December 2025 to present. He builds and maintains Python backend services and REST APIs and supports AI/ML features for business applications. See the Bixi Soft experience and DemandCast notes for detail.
 
 ## How he works
 - Prefers step-by-step, practical instructions: Step one, Step two, copy-paste-testable commands
