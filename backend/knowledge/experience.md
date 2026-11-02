@@ -1,6 +1,6 @@
 # Professional Experience — Bixi Soft
 
-Role: Python / AI-ML Developer at Bixi Soft, October 2025 to present. This is Talal's only confirmed employer.
+Role: Python / AI-ML Developer at Bixi Soft, December 2025 to present. This is Talal's only confirmed employer.
 
 I build and maintain Python backend services and REST APIs, and support AI/ML features for business applications.
 
